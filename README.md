@@ -12,46 +12,46 @@ Este archivo ayuda a:
 
 (i) Lulo_Bank_PRueba_VF.ipynb: Tiene 6 secciones
     (0) Importe de librerias
-    (1) Extraccopm de datos desde una API
-    (2) Revision general de los datos extraidos
-    (3) Creacion y revision de DataFrames
+    (1) Extracción de datos desde una API
+    (2) Revisión general de los datos extraidos
+    (3) Creación y revisión de DataFrames
     (4) DFs Celaning y Profiling
     (5) DFs a SQLite
     (6) ETL
 
-    A continuacion se profundiza un poco en cada seccion. 
+    A continuacion se profundiza un poco en cada sección. 
     Se recomienda usar VisualStudio Code para abrir el archivo Lulo_Bank_Prueba_VF.ipynb
 
     (0) Importe de librerias: 
-        Aqui se importaron las librerias necesarias para extraer, transformar,
+        Aquí se importaron las librerías necesarias para extraer, transformar,
         analizar y cargar los datos de salida. 
-        Entre las librerias mas imporantes estan: pandas, numpy, matplotlib, requests, json, seaborn y sqlite3.
+        Entre las librerías más importantes están: pandas, numpy, matplotlib, requests, json, seaborn y sqlite3.
     
-    (1) Extraccion de datos desde API: 
-        La extraccion de los datos de la API se realizo por medio de 3 for loops, que ayudaron a transformar los datos
+    (1) Extracción de datos desde API: 
+        La extracción de los datos de la API se realizó por medio de 3 for loops, que ayudaron a transformar los datos
         desde una API (url) a dataframe (pasando por text, json y list).
 
-    (2) Revision general de los datos extraidos:
-        Aqui se reviso si los datos eran homogeneos es decir que cada dia se registraban la misma cantidad de variables (columnas),
+    (2) Revisión general de los datos extraidos:
+        Aquí se revisó si los datos eran homogéneos es decir que cada día se registraban la misma cantidad de variables (columnas),
         y la misma cantidad de registros (filas). 
-        Se identifico que no todos los dias se registran la misma cantidad de datos y no todos los dias se ingresan la misma cantidad de variables. 
-        Los datos seguin un comportamiento periodico (semanal), empezando en los valores mas bajos los dias Sabados y Domingos. Luego se aumenta el numero
-        de registros durante la semana y finalmente el valor mas alto de registros se obtienen los dias Viernes.
+        Se identificó que no todos los días se registran la misma cantidad de datos y no todos los días se ingresan la misma cantidad de variables. 
+        Los datos siguen un comportamiento periódico (semanal), empezando en los valores mas bajos los dias Sabados y Domingos. Luego se aumenta el numero
+        de registros durante la semana y finalmente el valor mas alto de registros se obtienen los días Viernes.
         
         Tambien se reviso de manera general que tipos de variables existian y si cauntos registros no nulos tenian. 
         Se identificaron 12 variables principales (id, url, name, season, number, type, airdate, airtime, airstamp, runtime, image y summary) y 
         50 variables complementarias (en su gran mayoria embedded o incorporadas en el data set).
 
-        Se identifico que en las variable incorporadas como 'ratings' es donde estan la gran mayoria de datos faltantes en el data set. 
+        Se identifico que en las variables incorporadas como 'ratings' es donde están la gran mayoría de datos faltantes en el data set. 
         Las 12 variables principales tienen baja cantidad de nulo oscilando entre un 2% y 15% (en el peor de los casos).  
 
-        Con base en la informacion entregada sobre el ouput de interes, se definieron los DFs a formar y extraer. 
+        Con base en la información entregada sobre el ouput de interes, se definieron los DFs a formar y extraer. 
        
     
-    (3) Creacion y revision de DataFrames
-        Con base en como estan los datos obtenidos de la API (filas y columnas), el numero de datos faltantes por cada variable 
-        registrada durante el periodo analizado (Diciembre 2020), y las variables de interes por parte del cliente sedefinio crear
-        5 diferentes Dataframes que contienen la informacion mas relevante para el cliente:
+    (3) Creación y revisión de DataFrames
+        Con base en como están los datos obtenidos de la API (filas y columnas), el número de datos faltantes por cada variable 
+        registrada durante el periodo analizado (Diciembre 2020), y las variables de interés por parte del cliente se definió crear
+        5 diferentes Dataframes que contienen la información más relevante para el cliente:
         
         (3.1) Air Basic DF: Variables de interes ['id','type','airdate','url']
         
@@ -108,7 +108,7 @@ Este archivo ayuda a:
 ● Carpeta db/ con el archivo de la base de datos (tvseries_2020-12.sqlite).
 ● Carpeta model/, con los archivos config.py y tv_series_db.py que ayudan a obtener los datos en archivos  en formato (.csv).
 
-(iv) Informacion de Contacto:
+(iv) Información de Contacto:
 Nombre: Luis Miguel Caicedo 
 email: lmcaiced@gmail.com
 Celular N°: 3174154741
