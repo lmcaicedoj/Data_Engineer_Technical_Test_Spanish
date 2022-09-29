@@ -95,6 +95,8 @@ Este archivo ayuda a:
      Alli vaya a la TERMINAL que se encuentra en la parte inferior de la pantalla y seleccione la opcion de interes (recomendado Git Bash).
      Alli utilice los comando de Git Bash ($pwd, $cd, $ls y otros) para llegar a la carpeta que contiene el archivo. 
      Escriba el nombre del archivo y ejecutelo. El resultado seran archivos .csv donde estaran los datos transformados por la ETL.
+     Este es el link en Tableau para ver las graficas resultantes: 
+     https://public.tableau.com/app/profile/luis.m.caicedo/viz/TV_Series_Dec_2020/Dashboard1
           
 
 
